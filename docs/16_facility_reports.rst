@@ -167,3 +167,207 @@ Sample Expected Data
         ]
     }
 
+
+
+Facility count by owners
+----------------------------------
+One can be able to get the number of facilities by owners
+
+To get this report ``GET`` the ``URL`` ``api/reporting/?report_type=facility_count_by_owner``
+
+Sample Expceted Response
+
+.. code-block:: javascript
+
+    {
+        "total": 8361,
+        "results": [
+            {
+                "owner": "State Coorporation",
+                "number_of_facilities": 5
+            },
+            {
+                "owner": "Private Enterprise (Institution)",
+                "number_of_facilities": 1203
+            },
+            {
+                "owner": "NOT IN LIST",
+                "number_of_facilities": 0
+            },
+            {
+                "owner": "Humanitarian Agencies",
+                "number_of_facilities": 3
+            },
+            {
+                "owner": "Private Practice - Unspecified",
+                "number_of_facilities": 179
+            }
+        ]
+    }
+
+
+
+Facility types by counties detailed reports
+--------------------------------------------------
+To get this report do a ``GET`` to the ``URL`` ``/api/reporting/?report_type=facility_count_by_facility_type_detailed``
+
+Sample Expected data
+
+..code-block:: javascript
+
+    {
+        "total": [],
+        "results": [
+            {
+                "county": "NAIROBI",
+                "facilities": [
+                    {
+                        "number_of_facilities": 3,
+                        "facility_type": "District Hospital"
+                    }
+                ]
+            },
+            {
+                "county": "Kiambu",
+                "facilities": [
+                    {
+                        "number_of_facilities": 3,
+                        "facility_type": "District Hospital"
+                    }
+                ]
+            },
+            {
+                "county": "Wajir",
+                "facilities": [
+                    {
+                        "number_of_facilities": 3,
+                        "facility_type": "District Hospital"
+                    }
+                ]
+            }
+        ]
+    }
+
+
+Facility keph levels reports
+-------------------------------
+``GET`` the ``URL`` ``api/reporting/?report_type=facility_keph_level_report``
+
+
+Sample Expected Response data
+
+.. code-block:: javascript
+
+    {
+        "total": [],
+        "results": [
+            {
+                "county": "NAIROBI",
+                "facilities": [
+                    {
+                        "keph_level": "Not Classified",
+                        "number_of_facilities": 0
+                    },
+                    {
+                        "keph_level": "Level 6",
+                        "number_of_facilities": 0
+                    },
+                    {
+                        "keph_level": "Level 5",
+                        "number_of_facilities": 0
+                    },
+                    {
+                        "keph_level": "Level 4",
+                        "number_of_facilities": 0
+                    },
+                    {
+                        "keph_level": "Level 3",
+                        "number_of_facilities": 0
+                    },
+                    {
+                        "keph_level": "Level 2",
+                        "number_of_facilities": 0
+                    }
+                ]
+            },
+            {
+                "county": "KIAMBU",
+                "facilities": [
+                    {
+                        "keph_level": "Not Classified",
+                        "number_of_facilities": 0
+                    },
+                    {
+                        "keph_level": "Level 6",
+                        "number_of_facilities": 0
+                    },
+                    {
+                        "keph_level": "Level 5",
+                        "number_of_facilities": 0
+                    },
+                    {
+                        "keph_level": "Level 4",
+                        "number_of_facilities": 0
+                    },
+                    {
+                        "keph_level": "Level 3",
+                        "number_of_facilities": 0
+                    },
+                    {
+                        "keph_level": "Level 2",
+                        "number_of_facilities": 0
+                    }
+                ]
+            }
+        ]
+    }
+
+
+Facility report by county constituencies
+----------------------------------------
+``GET`` the ``URL`` ``api/reporting/?report_type=facility_constituency_report``
+
+Sample Expected data
+
+..code-block:: javascript
+
+    {
+        "total": [],
+        "results": [
+            {
+                "county": "NAIROBI",
+                "facilities": [
+                    {
+                        "constituency": "MATHARE",
+                        "number_of_facilities": 9
+                    },
+                    {
+                        "constituency": "STAREHE",
+                        "number_of_facilities": 123
+                    },
+                    {
+                        "constituency": "KAMUKUNJI",
+                        "number_of_facilities": 58
+                    }
+                ]
+            },
+            {
+                "county": "HOMA BAY",
+                "facilities": [
+                    {
+                        "constituency": "SUBA",
+                        "number_of_facilities": 27
+                    },
+                    {
+                        "constituency": "MBITA",
+                        "number_of_facilities": 35
+                    },
+                    {
+                        "constituency": "NDHIWA",
+                        "number_of_facilities": 29
+                    }
+                ]
+
+            }
+        ]
+    }

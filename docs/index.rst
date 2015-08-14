@@ -30,8 +30,9 @@ Developers guide
     11_community_health_units
     12_regulation
     13_gis
+    16_facility_reports
     14_workflow
     15_code_of_conduct
-    16_facility_reports
+
 
 .. include:: ../CHANGELOG.rst
