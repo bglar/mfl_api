@@ -1,0 +1,169 @@
+Facility Reports
+===================
+Facility count by county, facility count by constituency, facility count by owner types are among the reports that can be generate from MFL v2.
+
+There are number of reports that can be gotten from MFL v2:
+
+
+Facility Count by County
+--------------------------
+``URL`` ``GET`` ``api/reporting/?report_type=facility_count_by_county``
+
+Sample Expected Data
+
+.. code-block:: javascript
+
+    {
+       {
+            "total": 8361,
+            "results": [
+                {
+                    "number_of_facilities": 784,
+                    "county_name": "NAIROBI"
+                },
+                {
+                    "number_of_facilities": 114,
+                    "county_name": "NYAMIRA"
+                }
+            ]
+        }
+    }
+
+Facility Count by Constituency
+--------------------------------
+``URL`` ``GET`` ``api/reporting/?report_type=facility_count_by_consituency``
+
+Sample Expected Data
+
+.. code-block:: javascript
+
+
+    {
+        "total": 8361,
+        "results": [
+            {
+                "number_of_facilities": 9,
+                "constituency_name": "MATHARE"
+            },
+            {
+                "number_of_facilities": 123,
+                "constituency_name": "STAREHE"
+            },
+            {
+                "number_of_facilities": 58,
+                "constituency_name": "KAMUKUNJI"
+            }
+        ]
+    }
+
+You can also filter by county by appending the county to the URL as shown below
+``URL`` ``GET`` ``api/reporting/?report_type=facility_count_by_consituency&filters=county=<county_id>``
+
+Sample Expected Data (Nyamira county)
+
+.. code-block:: javascript
+
+        {
+            "total": 114,
+            "results": [
+                {
+                    "number_of_facilities": 32,
+                    "constituency_name": "BORABU"
+                },
+                {
+                    "number_of_facilities": 26,
+                    "constituency_name": "NORTH MUGIRANGO"
+                },
+                {
+                    "number_of_facilities": 21,
+                    "constituency_name": "WEST MUGIRANGO"
+                },
+                {
+                    "number_of_facilities": 35,
+                    "constituency_name": "KITUTU MASABA"
+                }
+            ]
+        }
+
+
+
+Facility Count by Owner Category
+---------------------------------
+To get a report of the facilities count bu owner category
+``GET`` the ``URL``
+
+Sample Expected Data
+
+.. code-block:: javascript
+
+        {
+            "total": 8361,
+            "results": [
+                {
+                    "number_of_facilities": 0,
+                    "owner_category": "Other"
+                },
+                {
+                    "number_of_facilities": 268,
+                    "owner_category": "Non-Governmental Organizations"
+                },
+                {
+                    "number_of_facilities": 3226,
+                    "owner_category": "Private Institutions and Private Practice"
+                },
+                {
+                    "number_of_facilities": 853,
+                    "owner_category": "Faith Based Organization"
+                },
+                {
+                    "number_of_facilities": 356,
+                    "owner_category": "Other Public Institution"
+                },
+                {
+                    "number_of_facilities": 3658,
+                    "owner_category": "Ministry of Health"
+                }
+            ]
+        }
+
+
+Facility count by facility type
+----------------------------------
+
+It is also possible to get the count of facilities by their owner types:
+``GET`` the ``URL`` ``api/reporting/?report_type=facility_count_by_facility_type``
+
+Sample Expected Data
+
+.. code-block:: javascript
+
+    {
+        "total": 8361,
+        "results": [
+            {
+                "number_of_facilities": 119,
+                "type_category": "District Hospital"
+            },
+            {
+                "number_of_facilities": 901,
+                "type_category": "Health Centre"
+            },
+            {
+                "number_of_facilities": 3808,
+                "type_category": "Dispensary"
+            },
+            {
+                "number_of_facilities": 2735,
+                "type_category": "Medical Clinic"
+            },
+            {
+                "number_of_facilities": 196,
+                "type_category": "Other Hospital"
+            },
+            {
+                "number_of_facilities": 119,
+                "type_category": "Sub-District Hospital"
+            }
+        ]
+    }
+
