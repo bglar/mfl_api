@@ -213,7 +213,7 @@ To get this report do a ``GET`` to the ``URL`` ``/api/reporting/?report_type=fac
 
 Sample Expected data
 
-..code-block:: javascript
+..  code-block:: javascript
 
     {
         "total": [],
@@ -329,7 +329,7 @@ Facility report by county constituencies
 
 Sample Expected data
 
-..code-block:: javascript
+..  code-block:: javascript
 
     {
         "total": [],
