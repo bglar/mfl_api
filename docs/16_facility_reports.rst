@@ -371,3 +371,99 @@ Sample Expected data
             }
         ]
     }
+
+Report of Facility Upgrades and Downgrades
+-------------------------------------------
+
+URL
+``api/reporting/upgrades_downgrades``
+
+
+Sample Expexcted Data
+
+..  code-block:: javascript
+
+    {
+
+        "total_number_of_changes": 100,
+        "results": [
+            {
+            "county": "Nairobi",
+            "changes": 10
+            },
+            {
+                "county": "Kiambu",
+                "changes": 7
+            },
+            {
+                "county": "Embu",
+                "changes": 67
+            }
+        ]
+    }
+
+
+Expected Response code:
+    HTTP 200 OK
+
+
+Filtering
++++++++++++++++++++++++++++++++++++++++++++++++++
+The url supports filtering for upgrades and downgrades.
+
+To get upgrades:
+Do a  a get to the url
+``api/reporting/upgrades_downgrades/?upgrade=True``
+
+To get the downgrades
+
+Do a ``GET`` to the URL
+``api/reporting/upgrades_downgrades/?downgrade=True``
+
+
+Filtering by counties
++++++++++++++++++++++++
+``api/reporting/upgrades_downgrades/?county=<county_id>``
+
+Sample Expected Data
+
+..  code-block:: javascript
+
+    {
+        "total_facilities_changed": 3,
+        "facilities": [
+            {
+                "name": "Endbeess district Hospital",
+                "code": 14455,
+                "current_keph_level": 4,
+                "previous_keph_level": 5,
+                "current_facility_type": "Distrcict Hospital",
+                "previous_facility_type": "Health Centre"
+
+            },
+            {
+                "name": "Kwanaza district Hospital",
+                "code": 14456,
+                "current_keph_level": 3,
+                "previous_keph_level": 4,
+                "current_facility_type": "Distrcict Hospital",
+                "previous_facility_type": "Health Centre"
+
+            },
+            {
+                "name": "Kulamawe Nursing Home",
+                "code": 14457,
+                "current_keph_level": 4,
+                "previous_keph_level": 5,
+                "current_facility_type": "Distrcict Hospital",
+                "previous_facility_type": "Health Centre"
+
+            }
+        ]
+    }
+
+The report on counties is  also filterable for upgrades and donwgrades
+Like so ``api/reporting/upgrades_downgrades/?county=<county_id>&upgrade=True`` for upgrades.
+
+Or ``api/reporting/upgrades_downgrades/?county=<county_id>&downgrade=True`` for downgrades.
+
