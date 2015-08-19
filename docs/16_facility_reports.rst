@@ -438,7 +438,8 @@ Sample Expected Data
                 "current_keph_level": 4,
                 "previous_keph_level": 5,
                 "current_facility_type": "Distrcict Hospital",
-                "previous_facility_type": "Health Centre"
+                "previous_facility_type": "Health Centre",
+                "reason": "Increase in bed capacity"
 
             },
             {
@@ -447,7 +448,8 @@ Sample Expected Data
                 "current_keph_level": 3,
                 "previous_keph_level": 4,
                 "current_facility_type": "Distrcict Hospital",
-                "previous_facility_type": "Health Centre"
+                "previous_facility_type": "Health Centre",
+                "reason": "Increase in bed capacity"
 
             },
             {
@@ -456,7 +458,8 @@ Sample Expected Data
                 "current_keph_level": 4,
                 "previous_keph_level": 5,
                 "current_facility_type": "Distrcict Hospital",
-                "previous_facility_type": "Health Centre"
+                "previous_facility_type": "Health Centre",
+                "reason": "Increase in bed capacity"
 
             }
         ]
