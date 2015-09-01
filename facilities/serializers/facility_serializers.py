@@ -211,6 +211,10 @@ class RegulatingBodyContactSerializer(
 
     contact_text = serializers.ReadOnlyField(source='contact.contact')
     contact_type = serializers.ReadOnlyField(
+        source='contact.contact_type.id'
+
+    )
+    contact_type_name = serializers.ReadOnlyField(
         source='contact.contact_type.name'
 
     )
@@ -341,7 +345,7 @@ class RegulatingBodySerializer(
 
     @transaction.atomic
     def create(self, validated_data):
-        contacts = self.initial_data.pop('contacts')
+        contacts = self.initial_data.pop('reg_contacts', [])
         self._validate_contacts(contacts)
         if self.inlining_errors:
             raise ValidationError({
@@ -354,7 +358,7 @@ class RegulatingBodySerializer(
 
     @transaction.atomic
     def update(self, instance, validated_data):
-        contacts = self.initial_data.pop('contacts')
+        contacts = self.initial_data.pop('reg_contacts', [])
         self._validate_contacts(contacts)
         if self.inlining_errors:
             raise ValidationError({
